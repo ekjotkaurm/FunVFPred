@@ -12,5 +12,19 @@ FunVFPred fills a critical gap in fungal pathogenicity research by being the fir
 
 # Clone this GitLab Repository
 
-git clone https://github.com/ekjotkaurm/FunVFPred
+git clone http://github.com/ekjotkaurm/FunVFPred 
+
 cd FunVFPred
+
+# Requirements
+
+# Install Dependencies
+
+Python:
+  
+  For Ubuntu/Debian-based Systems:
+  
+  Install Python 3:
+
+sudo apt install python3
+

@@ -8,3 +8,9 @@ FunVFPred fills a critical gap in fungal pathogenicity research by being the fir
 # FunVFPred Workflow
 
 ![Figure1_workflow_final](https://github.com/user-attachments/assets/f10fd894-d3ce-4e83-bb85-f5ed972cc5ac)
+
+
+# Clone this GitLab Repository
+
+git clone https://github.com/ekjotkaurm/FunVFPred
+cd FunVFPred

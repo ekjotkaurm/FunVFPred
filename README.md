@@ -1,4 +1,4 @@
-# FunVFPred: A Random Forest-Based Model for Predicting Fungal Virulence Factors 
+# FunVFPred: Predicting fungal virulence factors using a unified representation learning model
 
 
 

@@ -44,7 +44,33 @@ Python:
 
     pip3 --version
   
+# Repository Contents
+# DATA directory
 
+It contains below mentioned data files.
+
+(i) input.fasta - positive dataset having virulent protein sequences and negative dataset having non-virulent protein sequences.
+
+(ii) labels.csv - file containing positive and negative protein ids with labels.
   
+# Feature_extraction directory
 
+This directory contains python codes to extract the features.
 
+(i) aac.py - python code to extarct amino acid composition (aac) feature. 
+
+(ii) dde.py - python code to extarct dipeptide deviation from expected mean (dde) feature.
+
+(iii) unirep.py - python code to extarct unified representation (unirep) feature.
+
+# Feature_fusion directory
+
+This directory contains python codes to merge the features.
+
+(i) merge_aac_dde.py - python code to merge amino acid composition (aac) and dipeptide deviation from expected mean (dde) features. 
+
+(ii) merge_aac_dde_unirep.py - python code to merge amino acid composition (aac), dipeptide deviation from expected mean (dde) and unified representation (unirep) features.
+
+(iii) merge_aac_unirep.py - python code to merge amino acid composition (aac) and unified representation (unirep) features.
+
+(iv) merge_dde_unirep.py - python code to merge dipeptide deviation from expected mean (dde) and unified representation (unirep) features.

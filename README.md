@@ -17,6 +17,13 @@ FunVFPred fills a critical gap in fungal pathogenicity research by being the fir
     cd FunVFPred
 
 # Requirements
+# Dependencies
+
+    python 3.9.12
+
+    tensorflow 2.17.0
+
+    numpy 1.23.5
 # Install Dependencies
 
 Python:

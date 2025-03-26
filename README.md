@@ -110,3 +110,7 @@ This directory contains all the output files generated using the codes available
 (ix) train_AAC.csv.gz -
 
 (x) validation_AAC.csv.gz -
+
+# How to run FunVFPred
+
+

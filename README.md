@@ -74,3 +74,39 @@ This directory contains python codes to merge the features.
 (iii) merge_aac_unirep.py - python code to merge amino acid composition (aac) and unified representation (unirep) features.
 
 (iv) merge_dde_unirep.py - python code to merge dipeptide deviation from expected mean (dde) and unified representation (unirep) features.
+
+# Data_splitting directory
+
+This directory contains python code that split the dataset into train, test and validation datasets - split_aac.py
+
+# Classifier directory
+
+This directory contains the python codes to classify the dataset as virulent or non-virulent proteins.
+
+(i) RF_aac.py - The Random Forest classifier is an ensemble learning algorithm that enhances accuracy and minimizes overfitting by combining predictions from multiple randomly constructed decision trees.
+
+(ii) RF_5fold_cross_validation_aac.py - Random Forest with 5-fold cross-validation divides the dataset into five parts, using four for training and one for testing in each cycle to enhance reliability.
+
+# FILES directory
+
+This directory contains all the output files generated using the codes available in the Feature_extraction, Feature_fusion, Data_splitting and Classifier directories. The outut files are below mentioned.
+
+(i) AAC.csv.gz -
+
+(ii) DDE.csv.gz -
+
+(iii) UNIREP.csv.gz -
+
+(iv) merged_AAC_DDE.csv.gz -
+
+(v) merged_AAC_DDE_UNIREP.csv.gz -
+
+(vi) merged_AAC_UNIREP.csv.gz -
+
+(vii) merged_DDE_UNIREP.csv.gz -
+
+(viii) test_AAC.csv.gz -
+
+(ix) train_AAC.csv.gz -
+
+(x) validation_AAC.csv.gz -

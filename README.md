@@ -111,15 +111,21 @@ This directory contains all the output files generated using the codes available
 
 (x) validation_AAC.csv.gz - positive and negative dataset having aac feature values to validate the model.
 
+# Step 1: Preparing input files
+
+input.fasta - containg the positive (virulent protein sequences) and negative (non-virulent protein sequences) dataset.
+Virulent proteins of fungal species can be downloaded from the virulence factors databases such as PHI-base, Victors and DFVF and non-virulent proteins of same fungal species from UniProt database.
+After downloading the dataset, remove the redundant protein sequences using CD-HIT with 100% identity threshold. Next step involves the balancing the dataset (1:1) 
+
 # How to run FunVFPred pipeline
 
-   # Step 1: Download "FunVFPred" on your system using command
+   # Step 2: Download "FunVFPred" on your system using command
 
     git clone http://github.com/ekjotkaurm/FunVFPred.git
 
     cd FunVFPred
-
-   # Step 2: Run python code to extract features 
+   
+   # Step 3: Run python code to extract features 
 
     python aac.py
 
@@ -127,6 +133,8 @@ This directory contains all the output files generated using the codes available
 
     python unirep.py
 
+   # Step 2: Merge the extracted features 
+     
     python merge_aac_dde.py
 
     python merge_aac_dde_unirep.py

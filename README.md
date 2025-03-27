@@ -115,7 +115,7 @@ This directory contains all the output files generated using the codes available
 
 Download "FunVFPred" on your system using command
 
-$git clone http://github.com/ekjotkaurm/FunVFPred.git
+    $git clone http://github.com/ekjotkaurm/FunVFPred.git
 
 
 

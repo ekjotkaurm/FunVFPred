@@ -103,13 +103,13 @@ This directory contains all the output files generated using the codes available
 
 (vi) merged_AAC_UNIREP.csv.gz -
 
-(vii) merged_DDE_UNIREP.csv.gz -
+(vii) merged_DDE_UNIREP.csv.gz - 
 
-(viii) test_AAC.csv.gz -
+(viii) test_AAC.csv.gz - positive and negative dataset having aac feature values to test the model.
 
-(ix) train_AAC.csv.gz -
+(ix) train_AAC.csv.gz - positive and negative dataset having aac feature values to train the model.
 
-(x) validation_AAC.csv.gz -
+(x) validation_AAC.csv.gz - positive and negative dataset having aac feature values to validate the model.
 
 # How to run FunVFPred pipeline
 

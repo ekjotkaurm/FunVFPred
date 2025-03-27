@@ -91,19 +91,19 @@ This directory contains the python codes to classify the dataset as virulent or 
 
 This directory contains all the output files generated using the codes available in the Feature_extraction, Feature_fusion, Data_splitting and Classifier directories. The outut files are below mentioned.
 
-(i) AAC.csv.gz - 
+(i) AAC.csv.gz - file containing the 20-dimensional amino acid composition (aac) features of positive and negtive dataset. 
 
-(ii) DDE.csv.gz -
+(ii) DDE.csv.gz - file containing the 400-dimensional dipeptide deviation from expected mean (dde) features of positive and negtive dataset. 
 
-(iii) UNIREP.csv.gz -
+(iii) UNIREP.csv.gz - file containing the 1900-dimensional unified representation (unirep) features of positive and negtive dataset. 
 
-(iv) merged_AAC_DDE.csv.gz -
+(iv) merged_AAC_DDE.csv.gz - file containing the combined 420-dimensional features including amino acid composition (aac) and dipeptide deviation from expected mean (dde) of positive and negtive dataset. 
 
-(v) merged_AAC_DDE_UNIREP.csv.gz -
+(v) merged_AAC_DDE_UNIREP.csv.gz - file containing the combined 2320-dimensional features including amino acid composition (aac), dipeptide deviation from expected mean (dde) and unified representation (unirep)  of positive and negtive dataset. 
 
-(vi) merged_AAC_UNIREP.csv.gz -
+(vi) merged_AAC_UNIREP.csv.gz -  file containing the combined 1920-dimensional features including amino acid composition (aac) and unified representation (unirep) of positive and negtive dataset. 
 
-(vii) merged_DDE_UNIREP.csv.gz - 
+(vii) merged_DDE_UNIREP.csv.gz -  file containing the combined 2300-dimensional features including dipeptide deviation from expected mean (dde) and unified representation (unirep) of positive and negtive dataset. 
 
 (viii) test_AAC.csv.gz - positive and negative dataset having aac feature values to test the model.
 

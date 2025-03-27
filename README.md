@@ -91,7 +91,7 @@ This directory contains the python codes to classify the dataset as virulent or 
 
 This directory contains all the output files generated using the codes available in the Feature_extraction, Feature_fusion, Data_splitting and Classifier directories. The outut files are below mentioned.
 
-(i) AAC.csv.gz -
+(i) AAC.csv.gz - 
 
 (ii) DDE.csv.gz -
 
@@ -111,6 +111,11 @@ This directory contains all the output files generated using the codes available
 
 (x) validation_AAC.csv.gz -
 
-# How to run FunVFPred
+# How to run FunVFPred pipeline
+
+Download "FunVFPred" on your system using command
+
+$git clone https://github.com/ekjotkaurm/FunVFPred.git
+
 
 

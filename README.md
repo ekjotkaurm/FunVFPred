@@ -115,23 +115,23 @@ This directory contains all the output files generated using the codes available
 
    # Step 1: Download "FunVFPred" on your system using command
 
-    $git clone http://github.com/ekjotkaurm/FunVFPred.git
+    git clone http://github.com/ekjotkaurm/FunVFPred.git
 
     cd FunVFPred
 
    # Step 2: Run python code to extract features 
 
-   python aac.py
+    python aac.py
 
-   python dde.py
+    python dde.py
 
-   python unirep.py
+    python unirep.py
 
-   python merge_aac_dde.py
+    python merge_aac_dde.py
 
-   python merge_aac_dde_unirep.py
+    python merge_aac_dde_unirep.py
 
-   python merge_aac_unirep.py
+    python merge_aac_unirep.py
 
-   python merge_dde_unirep.py
+    python merge_dde_unirep.py
 

@@ -125,6 +125,8 @@ Commands to prepare the input.
 
     python balance_data.py
 
+    cat balanced_pos.fasta balanced_neg.fasta >input.fasta
+
 (iii) labels.csv - labeled file in csv format containing balanced dataset of positive and negative protein ids.
 
 # How to run FunVFPred pipeline

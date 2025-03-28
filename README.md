@@ -155,3 +155,12 @@ Commands to prepare the input.
 
     python merge_dde_unirep.py
 
+   # Step 3: Splitting the dataset
+
+Run the following command to split the dataset into training, testing, and validation sets:
+
+    python split_aac.py
+
+This script is specifically for the amino acid composition (AAC) feature file. For other feature types, such as DDE, UniRep, or merged features, use the same script but modify the input file accordingly.
+   
+

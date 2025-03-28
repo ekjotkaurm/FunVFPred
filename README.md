@@ -118,8 +118,8 @@ Virulent proteins of fungal species can be downloaded from the virulence factors
 After downloading the dataset, remove the redundant protein sequences using CD-HIT with 100% identity threshold. Next step involves balancing the dataset. 
 Commands to prepare the input.
 
-    cd-hit -i positive_proteins.fasta -o CDHIT100_pos -c 0.1 -T 8 -M 2000
-    cd-hit -i negative_proteins.fasta -o CDHIT100_neg -c 0.1 -T 8 -M 2000
+    cd-hit -i positive_proteins.fasta -o CDHIT100_pos -c 1 -T 8 -M 2000
+    cd-hit -i negative_proteins.fasta -o CDHIT100_neg -c 1 -T 8 -M 2000
     
 
 # How to run FunVFPred pipeline

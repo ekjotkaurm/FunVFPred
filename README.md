@@ -175,6 +175,6 @@ This script is specifically for the amino acid composition (AAC) feature file. F
 
 Run the following command for 5-fold cross-validation:
 
-   RF_5fold_cross_validation_aac.py
+    RF_5fold_cross_validation_aac.py
 
 This script is designed for the amino acid composition (AAC) feature file. For other feature types, such as DDE, UniRep, or merged features, the same script can be used by simply changing the input file.

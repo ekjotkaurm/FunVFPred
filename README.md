@@ -163,4 +163,18 @@ Run the following command to split the dataset into training, testing, and valid
 
 This script is specifically for the amino acid composition (AAC) feature file. For other feature types, such as DDE, UniRep, or merged features, use the same script but modify the input file accordingly.
    
+   # Step 4: Model Building/ Classification 
 
+Run the following command to build the model to classify the virulent and non-virulent proteins: 
+
+    python RF_aac.py
+
+This script is specifically for the amino acid composition (AAC) feature file. For other feature types, such as DDE, UniRep, or merged features, use the same script but modify the input file accordingly.
+
+   # Step 5: Five-fold cross-validation
+
+Run the following command for 5-fold cross-validation:
+
+   RF_5fold_cross_validation_aac.py
+
+This script is designed for the amino acid composition (AAC) feature file. For other feature types, such as DDE, UniRep, or merged features, the same script can be used by simply changing the input file.

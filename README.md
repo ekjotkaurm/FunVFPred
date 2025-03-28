@@ -115,7 +115,10 @@ This directory contains all the output files generated using the codes available
 
 input.fasta - containg the positive (virulent protein sequences) and negative (non-virulent protein sequences) dataset.
 Virulent proteins of fungal species can be downloaded from the virulence factors databases such as PHI-base, Victors and DFVF and non-virulent proteins of same fungal species from UniProt database.
-After downloading the dataset, remove the redundant protein sequences using CD-HIT with 100% identity threshold. Next step involves the balancing the dataset (1:1) 
+After downloading the dataset, remove the redundant protein sequences using CD-HIT with 100% identity threshold. Next step involves balancing the dataset. 
+Commands to prepare the input.
+
+    
 
 # How to run FunVFPred pipeline
 

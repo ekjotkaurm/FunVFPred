@@ -113,14 +113,19 @@ This directory contains all the output files generated using the codes available
 
 # Step 1: Preparing input files
 
-input.fasta - containg the positive (virulent protein sequences) and negative (non-virulent protein sequences) dataset.
+(i) input.fasta - containg the positive (virulent protein sequences) and negative (non-virulent protein sequences) dataset.
 Virulent proteins of fungal species can be downloaded from the virulence factors databases such as PHI-base, Victors and DFVF and non-virulent proteins of same fungal species from UniProt database.
-After downloading the dataset, remove the redundant protein sequences using CD-HIT with 100% identity threshold. Next step involves balancing the dataset. 
+After downloading the dataset, remove the redundant protein sequences using CD-HIT with 100% identity threshold. 
 Commands to prepare the input.
 
     cd-hit -i positive_proteins.fasta -o CDHIT100_pos -c 1 -T 8 -M 2000
     cd-hit -i negative_proteins.fasta -o CDHIT100_neg -c 1 -T 8 -M 2000
     
+(ii) Next step involves balancing the imbalanced dataset. In real-life scenarios, virulent (positive) and non-virulent (negative) proteins are highly imbalanced, with more negative dataset, making data imbalance a challenge. To address this, we applied random undersampling to achieve a 1:1 ratio for balanced model training. The python code for balancing the dataset is mentioned below.
+
+    python balance_data.py
+
+(iii) labels.csv - labeled file in csv format containing balanced dataset of positive and negative protein ids.
 
 # How to run FunVFPred pipeline
 

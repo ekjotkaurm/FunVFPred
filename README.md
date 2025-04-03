@@ -45,7 +45,7 @@ Python:
     pip3 --version
   
 # Repository Contents
-# DATA directory
+## DATA directory
 
 It contains below mentioned data files.
 
@@ -53,7 +53,7 @@ It contains below mentioned data files.
 
 (ii) labels.csv - file containing positive and negative protein ids with labels.
   
-# Feature_extraction directory
+## Feature_extraction directory
 
 This directory contains python codes to extract the features.
 
@@ -63,7 +63,7 @@ This directory contains python codes to extract the features.
 
 (iii) unirep.py - python code to extarct unified representation (unirep) feature.
 
-# Feature_fusion directory
+## Feature_fusion directory
 
 This directory contains python codes to merge the features.
 
@@ -75,7 +75,7 @@ This directory contains python codes to merge the features.
 
 (iv) merge_dde_unirep.py - python code to merge dipeptide deviation from expected mean (dde) and unified representation (unirep) features.
 
-# Data_splitting directory
+## Data_splitting directory
 
 This directory contains python code that split the dataset into train, test and validation datasets - split_aac.py
 
@@ -87,7 +87,7 @@ This directory contains the python codes to classify the dataset as virulent or 
 
 (ii) RF_5fold_cross_validation_aac.py - Random Forest with 5-fold cross-validation divides the dataset into five parts, using four for training and one for testing in each cycle to enhance reliability.
 
-# FILES directory
+## FILES directory
 
 This directory contains all the output files generated using the codes available in the Feature_extraction, Feature_fusion, Data_splitting and Classifier directories. The outut files are below mentioned.
 

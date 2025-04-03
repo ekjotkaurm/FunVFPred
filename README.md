@@ -17,14 +17,14 @@ FunVFPred fills a critical gap in fungal pathogenicity research by being the fir
     cd FunVFPred
 
 # Requirements
-# Dependencies
+## Dependencies
 
     python 3.9.12
 
     tensorflow 2.17.0
 
     numpy 1.23.5
-# Install Dependencies
+## Install Dependencies
 
 Python:
   
@@ -79,7 +79,7 @@ This directory contains python codes to merge the features.
 
 This directory contains python code that split the dataset into train, test and validation datasets - split_aac.py
 
-# Classifier directory
+## Classifier directory
 
 This directory contains the python codes to classify the dataset as virulent or non-virulent proteins.
 
@@ -111,7 +111,7 @@ This directory contains all the output files generated using the codes available
 
 (x) validation_AAC.csv.gz - positive and negative dataset having aac feature values to validate the model.
 
-# Step 1: Preparing input files
+## Step 1: Preparing input files
 
 (i) input.fasta - containg the positive (virulent protein sequences) and negative (non-virulent protein sequences) dataset.
 Virulent proteins of fungal species can be downloaded from the virulence factors databases such as PHI-base, Victors and DFVF and non-virulent proteins of same fungal species from UniProt database.
@@ -131,13 +131,13 @@ Commands to prepare the input.
 
 # How to run FunVFPred pipeline
 
-   # Step 2: Download "FunVFPred" on your system using command
+   ## Step 2: Download "FunVFPred" on your system using command
 
     git clone http://github.com/ekjotkaurm/FunVFPred.git
 
     cd FunVFPred
    
-   # Step 3: Run python code to extract features 
+   ## Step 3: Run python code to extract features 
 
     python aac.py
 
@@ -145,7 +145,7 @@ Commands to prepare the input.
 
     python unirep.py
 
-   # Step 2: Merge the extracted features 
+   ## Step 2: Merge the extracted features 
      
     python merge_aac_dde.py
 
@@ -155,7 +155,7 @@ Commands to prepare the input.
 
     python merge_dde_unirep.py
 
-   # Step 3: Splitting the dataset
+   ## Step 3: Splitting the dataset
 
 Run the following command to split the dataset into training, testing, and validation sets:
 
@@ -163,7 +163,7 @@ Run the following command to split the dataset into training, testing, and valid
 
 This script is specifically for the amino acid composition (AAC) feature file. For other feature types, such as DDE, UniRep, or merged features, use the same script but modify the input file accordingly.
    
-   # Step 4: Model Building/ Classification 
+   ## Step 4: Model Building/ Classification 
 
 Run the following command to build the model to classify the virulent and non-virulent proteins: 
 
@@ -171,7 +171,7 @@ Run the following command to build the model to classify the virulent and non-vi
 
 This script is specifically for the amino acid composition (AAC) feature file. For other feature types, such as DDE, UniRep, or merged features, use the same script but modify the input file accordingly.
 
-   # Step 5: Five-fold cross-validation
+   ## Step 5: Five-fold cross-validation
 
 Run the following command for 5-fold cross-validation:
 

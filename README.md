@@ -91,7 +91,7 @@ This directory contains the python codes to classify the dataset as virulent or 
 
 This directory contains all the output files generated using the codes available in the Feature_extraction, Feature_fusion, Data_splitting and Classifier directories. The outut files are below mentioned.
 
-(i) AAC.csv.gz - file containing the 20-dimensional amino acid composition (aac) features of positive and negtive dataset. 
+**(i) AAC.csv.gz -** file containing the 20-dimensional amino acid composition (aac) features of positive and negtive dataset. 
 
 (ii) DDE.csv.gz - file containing the 400-dimensional dipeptide deviation from expected mean (dde) features of positive and negtive dataset. 
 

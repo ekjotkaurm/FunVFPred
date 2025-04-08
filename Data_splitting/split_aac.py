@@ -2,7 +2,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 
 # Load the dataset
-file_path = "AAC.csv"  # Replace with the path to your file
+file_path = "/FILES/AAC.csv"  # Replace with the path to your file
 data = pd.read_csv(file_path)
 
 # Separate positive and negative samples
@@ -23,8 +23,8 @@ test = pd.concat([pos_test, neg_test]).sample(frac=1, random_state=42)
 val = pd.concat([pos_val, neg_val]).sample(frac=1, random_state=42)
 
 # Save to CSV files
-train.to_csv("train_AAC.csv", index=False)
-test.to_csv("test_AAC.csv", index=False)
-val.to_csv("validation_AAC.csv", index=False)
+train.to_csv("/FILES/train_AAC.csv", index=False)
+test.to_csv("/FILES/test_AAC.csv", index=False)
+val.to_csv("/FILES/validation_AAC.csv", index=False)
 
 print("Files saved successfully as train_AAC.csv, test_AAC.csv, and validation_AAC.csv")

@@ -2,8 +2,8 @@ import pandas as pd
 
 # List of CSV files to merge
 csv_files = [
-    "DDE.csv",
-    "UNIREP.csv"
+    "/FILES/DDE.csv",
+    "/FILES/UNIREP.csv"
 ]
 
 # Initialize merged_df with the first file

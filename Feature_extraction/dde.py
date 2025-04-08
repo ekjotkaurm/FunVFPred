@@ -79,8 +79,8 @@ def extract_features(fasta_file, label_file):
     return combined_df
 
 # Example usage
-fasta_file = 'input.fasta'  # Replace with your FASTA file
-label_file = 'labels.csv'            # Replace with your label CSV file
+fasta_file = '/DATA/input.fasta'  # Replace with your FASTA file
+label_file = '/DATA/labels.csv'            # Replace with your label CSV file
 features_df = extract_features(fasta_file, label_file)
 
 # Save features to CSV

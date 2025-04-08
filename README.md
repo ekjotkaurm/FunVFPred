@@ -129,6 +129,12 @@ Commands to prepare the input.
 
 **(iii) labels.csv -** labeled file in csv format containing balanced dataset of positive and negative protein ids.
 
+    grep ">positive" input.fasta |sed "s/>//g"|sed "s/$/\,1/g" > positive.csv
+    
+    grep ">negative" input.fasta |sed "s/>//g"|sed "s/$/\,0/g" > negative.csv
+    
+    (echo "protein_ids,label"; awk -F',' 'NR>1 {print $1",1"}' positive.csv; awk -F',' 'NR>1 {print $1",0"}' negative.csv) > labels.csv
+    
 # How to run FunVFPred pipeline
 
    ## Step 2: Download "FunVFPred" on your system using command

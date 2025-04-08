@@ -169,6 +169,12 @@ Run the following command to build the model to classify the virulent and non-vi
 
     python RF_aac.py
 
+    python ANN_aac.py
+
+    python DNN_aac.py
+
+    python MLP_aac.py
+
 This script is specifically for the amino acid composition (AAC) feature file. For other feature types, such as DDE, UniRep, or merged features, use the same script but modify the input file accordingly.
 
    ## Step 5: Five-fold cross-validation

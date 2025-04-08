@@ -2,9 +2,9 @@ import pandas as pd
 
 # List of CSV files to merge
 csv_files = [
-    "AAC.csv",
-    "DDE.csv",
-    "UNIREP.csv"
+    "/FILES/AAC.csv",
+    "/FILES/DDE.csv",
+    "/FILES/UNIREP.csv"
 ]
 
 # Initialize an empty list to store individual dataframes

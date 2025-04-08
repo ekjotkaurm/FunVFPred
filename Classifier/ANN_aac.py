@@ -12,9 +12,9 @@ import seaborn as sns
 from sklearn.metrics import roc_curve, auc, precision_score, recall_score, f1_score
 
 # Load the datasets
-train_data = pd.read_csv('train_AAC.csv')
-test_data = pd.read_csv('test_AAC.csv')
-validate_data = pd.read_csv('validation_AAC.csv')
+train_data = pd.read_csv('/FILES/train_AAC.csv')
+test_data = pd.read_csv('/FILES/test_AAC.csv')
+validate_data = pd.read_csv('/FILES/validation_AAC.csv')
 
 # Drop the 'protein_ids' column if present
 train_data = train_data.drop(columns=['protein_ids'], errors='ignore')

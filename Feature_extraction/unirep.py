@@ -59,8 +59,8 @@ def process_and_save_features(fasta_file, label_file, output_file, max_length=10
     print(f"Features saved to {output_file}")
 
 # Run the feature extraction and saving process
-fasta_file = "input.fasta"  # Path to your FASTA file
-label_file = "labels.csv"        # Path to your labels CSV file
+fasta_file = "/DATA/input.fasta"  # Path to your FASTA file
+label_file = "/DATA/labels.csv"        # Path to your labels CSV file
 output_file = "UNIREP.csv"  # Output CSV file with features
 
 process_and_save_features(fasta_file, label_file, output_file)    

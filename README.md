@@ -156,6 +156,8 @@ Commands to prepare the input.
    
    ## Step 3: Run python code to extract features 
 
+    cd Feature_extraction
+    
     python aac.py
 
     python dde.py
@@ -164,6 +166,8 @@ Commands to prepare the input.
 
    ## Step 2: Merge the extracted features 
      
+    cd Feature_fusion
+    
     python merge_aac_dde.py
 
     python merge_aac_dde_unirep.py
@@ -176,6 +180,8 @@ Commands to prepare the input.
 
 Run the following command to split the dataset into training, testing, and validation sets:
 
+    cd Data_splitting
+    
     python split_aac.py
 
 This script is specifically for the amino acid composition (AAC) feature file. For other feature types, such as DDE, UniRep, or merged features, use the same script but modify the input file accordingly.
@@ -184,6 +190,9 @@ This script is specifically for the amino acid composition (AAC) feature file. F
 
 Run the following command to build the model to classify the virulent and non-virulent proteins: 
 
+
+    cd Classifier
+    
     python RF_aac.py
 
     python ANN_aac.py

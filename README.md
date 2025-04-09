@@ -148,10 +148,16 @@ Commands to prepare the input.
 
     git clone http://github.com/ekjotkaurm/FunVFPred.git
 
-    cd FunVFPred
+   ### Change directory to the cloned FunVFPred folder 
+    
+    cd FunVFPred  
 
+   ### Navigate into the FILES directory where input datasets are stored 
+    
     cd FILES
 
+   ### Decompress all .gz files in the directory
+   
     gunzip *.gz
    
    ## Step 3: Run python code to extract features 

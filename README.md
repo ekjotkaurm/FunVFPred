@@ -149,6 +149,10 @@ Commands to prepare the input.
     git clone http://github.com/ekjotkaurm/FunVFPred.git
 
     cd FunVFPred
+
+    cd FILES
+
+    gunzip *.gz
    
    ## Step 3: Run python code to extract features 
 

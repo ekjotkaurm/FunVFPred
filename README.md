@@ -87,6 +87,13 @@ This directory contains the python codes to classify the dataset as virulent or 
 
 **(ii) RF_5fold_cross_validation_aac.py -** Random Forest with 5-fold cross-validation divides the dataset into five parts, using four for training and one for testing in each cycle to enhance reliability.
 
+**(iii) ANN_aac.py -** Implements an Artificial Neural Network designed to classify fungal proteins using AAC features. The architecture includes dense layers with ReLU activation and dropout to reduce overfitting, ending with a sigmoid layer for binary classification.
+
+**(iv) MLP_aac.py -** Builds a Multi-Layer Perceptron model using protein sequence features. The network includes multiple dense layers with ReLU activations, optimized for distinguishing between virulent and non-virulent proteins.
+
+**(v) DNN_aac.py -**  Implements a Deep Neural Network using AAC features. The model architecture includes multiple hidden layers with dropout and activation functions to enhance learning and reduce overfitting during classification.
+
+
 ## FILES directory
 
 This directory contains all the output files generated using the codes available in the Feature_extraction, Feature_fusion, Data_splitting and Classifier directories. The outut files are below mentioned.

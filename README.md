@@ -30,7 +30,7 @@ FunVFPred fills a critical gap in fungal pathogenicity research by being the fir
     tape_proteins 0.5
     
 ## Install Python and Required Packages
-### Python & pip installation (Ubuntu/Debian)
+#### Python & pip installation (Ubuntu/Debian)
 
   1. Install Python 3:
 
@@ -47,7 +47,7 @@ FunVFPred fills a critical gap in fungal pathogenicity research by being the fir
 
     pip3 --version
 
-### Install Python Dependencies
+#### Install Python Dependencies
 
 After setting up Python and pip, install the required packages:
 

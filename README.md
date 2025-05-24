@@ -24,6 +24,11 @@ FunVFPred fills a critical gap in fungal pathogenicity research by being the fir
     tensorflow 2.17.0
 
     numpy 1.23.5
+
+    torch 2.7.0
+
+    tape_proteins 0.5
+    
 ## Install Dependencies
 
 Python:

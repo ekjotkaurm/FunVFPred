@@ -29,14 +29,12 @@ FunVFPred fills a critical gap in fungal pathogenicity research by being the fir
 
     tape_proteins 0.5
     
-## Install Dependencies
+## Install Python and Required Packages
+### Python & pip installation (Ubuntu/Debian)
 
-Python:
-  
-  For Ubuntu/Debian-based Systems:
-  
   1. Install Python 3:
 
+    sudo apt update
     sudo apt install python3
 
   2. Install pip (Python Package Manager):
@@ -48,7 +46,17 @@ Python:
     python3 --version
 
     pip3 --version
-  
+
+### Install Python Dependencies
+
+After setting up Python and pip, install the required packages:
+
+    pip3 install torch
+    
+    pip3 install biopython
+    
+    pip3 install tape_proteins
+
 # Repository Contents
 ## DATA directory
 

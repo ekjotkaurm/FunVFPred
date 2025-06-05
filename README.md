@@ -241,3 +241,10 @@ Run the following command for 5-fold cross-validation:
 
 This script is designed for the amino acid composition (AAC) feature file. For other feature types, such as DDE, UniRep, or merged features, the same script can be used by simply changing the input file.
 
+
+# Prediction of virulent and non-virulent proteins using unknown dataset
+    
+    cd FunVFPred
+    
+    python predict_virulence.py
+

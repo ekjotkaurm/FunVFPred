@@ -25,9 +25,13 @@ FunVFPred fills a critical gap in fungal pathogenicity research by being the fir
 
     numpy 1.23.5
 
+    pandas 2.3.0
+
     torch 2.7.0
 
     tape_proteins 0.5
+
+    joblib 1.6.dev0 
     
 ## Install Python and Required Packages
 #### Python & pip installation (Ubuntu/Debian)
@@ -56,6 +60,13 @@ After setting up Python and pip, install the required packages:
     pip3 install biopython
     
     pip3 install tape_proteins
+
+    pip3 install pandas
+
+    pip3 install numpy 
+
+    pip3 install joblib
+
 
 # Repository Contents
 ## DATA directory

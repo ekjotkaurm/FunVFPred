@@ -194,7 +194,7 @@ Commands to prepare the input.
 
     python unirep.py
 
-   ## Step 2: Merge the extracted features 
+   ## Step 4: Merge the extracted features 
      
     cd Feature_fusion
     
@@ -206,7 +206,7 @@ Commands to prepare the input.
 
     python merge_dde_unirep.py
 
-   ## Step 3: Splitting the dataset
+   ## Step 5: Splitting the dataset
 
 Run the following command to split the dataset into training, testing, and validation sets:
 
@@ -216,7 +216,7 @@ Run the following command to split the dataset into training, testing, and valid
 
 This script is specifically for the amino acid composition (AAC) feature file. For other feature types, such as DDE, UniRep, or merged features, use the same script but modify the input file accordingly.
    
-   ## Step 4: Model Building/ Classification 
+   ## Step 6: Model Building/ Classification 
 
 Run the following command to build the model to classify the virulent and non-virulent proteins: 
 
@@ -233,7 +233,7 @@ Run the following command to build the model to classify the virulent and non-vi
 
 This script is specifically for the amino acid composition (AAC) feature file. For other feature types, such as DDE, UniRep, or merged features, use the same script but modify the input file accordingly.
 
-   ## Step 5: Five-fold cross-validation
+   ## Step 7: Five-fold cross-validation
 
 Run the following command for 5-fold cross-validation:
 

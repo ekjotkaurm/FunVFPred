@@ -5,9 +5,9 @@ import torch
 from tape import UniRepModel, TAPETokenizer
 import joblib
 
-# ==============================
+# ==========================
 # AAC Feature Extraction
-# ==============================
+# ==========================
 def compute_aac(sequence):
     amino_acids = 'ACDEFGHIKLMNPQRSTVWY'
     aac_vector = np.zeros(len(amino_acids))
@@ -17,90 +17,93 @@ def compute_aac(sequence):
     aac_vector /= len(sequence)
     return aac_vector
 
-# ==============================
+# ==========================
 # DDE Feature Extraction
-# ==============================
+# ==========================
 def compute_dde(sequence):
     amino_acids = 'ACDEFGHIKLMNPQRSTVWY'
-    num_amino_acids = len(amino_acids)
-    dde_vector = np.zeros((num_amino_acids, num_amino_acids))
+    dde_vector = np.zeros((20, 20))
     for i in range(len(sequence) - 1):
         aa1 = sequence[i]
         aa2 = sequence[i + 1]
         if aa1 in amino_acids and aa2 in amino_acids:
-            dde_vector[amino_acids.index(aa1)][amino_acids.index(aa2)] += 1
+            i1 = amino_acids.index(aa1)
+            i2 = amino_acids.index(aa2)
+            dde_vector[i1][i2] += 1
     total = np.sum(dde_vector)
     if total > 0:
         dde_vector /= total
-    expected_freq = np.outer(compute_aac(sequence), compute_aac(sequence))
-    dde_deviation = dde_vector.flatten() - expected_freq.flatten()
-    return dde_deviation
+    expected = np.outer(compute_aac(sequence), compute_aac(sequence))
+    deviation = dde_vector.flatten() - expected.flatten()
+    return deviation
 
-# ==============================
+# ==========================
 # UniRep Feature Extraction
-# ==============================
-def extract_unirep_features(sequences, max_length=1024):
+# ==========================
+def extract_unirep_features(sequences):
     print("Loading UniRep model...")
     model = UniRepModel.from_pretrained("babbler-1900").eval()
     tokenizer = TAPETokenizer(vocab="unirep")
     embeddings = []
     with torch.no_grad():
         for seq in sequences:
-            input_ids = torch.tensor([tokenizer.encode(seq[:max_length])])
-            output = model(input_ids)[0]
-            embeddings.append(output.mean(dim=1).squeeze().numpy())
+            encoded = torch.tensor([tokenizer.encode(seq[:1024])])  # truncate if >1024
+            output = model(encoded)[0]
+            mean_embedding = output.mean(dim=1).squeeze().numpy()
+            embeddings.append(mean_embedding)
     return np.array(embeddings)
 
-# ==============================
+# ==========================
 # Prediction Pipeline
-# ==============================
-def predict_from_fasta(fasta_file, model_file="rf_model.joblib"):
-    # Load protein sequences
-    sequences, ids = [], []
+# ==========================
+def predict_from_fasta(fasta_file, model_path="rf_model.joblib", output_file="virulence_predictions.csv"):
+    # Step 1: Read sequences
+    sequences = []
+    protein_ids = []
     for record in SeqIO.parse(fasta_file, "fasta"):
         sequences.append(str(record.seq))
-        ids.append(record.id)
+        protein_ids.append(record.id)
 
-    print(f"Total proteins to predict: {len(sequences)}")
+    print(f"Loaded {len(sequences)} sequences from {fasta_file}")
 
-    # Feature extraction
-    print("Extracting AAC...")
-    aac = np.array([compute_aac(seq) for seq in sequences])
+    # Step 2: Extract Features
+    print("Extracting AAC features...")
+    aac_features = np.array([compute_aac(seq) for seq in sequences])
 
-    print("Extracting DDE...")
-    dde = np.array([compute_dde(seq) for seq in sequences])
+    print("Extracting DDE features...")
+    dde_features = np.array([compute_dde(seq) for seq in sequences])
 
-    print("Extracting UniRep...")
-    unirep = extract_unirep_features(sequences)
+    print("Extracting UniRep features...")
+    unirep_features = extract_unirep_features(sequences)
 
-    # Merge features
-    all_features = np.concatenate([aac, dde, unirep], axis=1)
+    print("Combining all features...")
+    full_features = np.concatenate([aac_features, dde_features, unirep_features], axis=1)
 
-    # Load model
+    # Step 3: Load Trained Model
     print("Loading trained model...")
-    model = joblib.load(model_file)
+    model = joblib.load(model_path)
 
-    # Predict
-    predictions = model.predict(all_features)
-    probabilities = model.predict_proba(all_features)[:, 1]
+    # Step 4: Predict
+    print("Predicting virulence...")
+    preds = model.predict(full_features)
+    pred_labels = ['Virulent' if p == 1 else 'Non-Virulent' for p in preds]
 
-    # Create output DataFrame
-    result_df = pd.DataFrame({
-        "protein_ids": ids,
-        "prediction": predictions,
-        "probability": probabilities
+    # Step 5: Output Results
+    results = pd.DataFrame({
+        'protein_ids': protein_ids,
+        'prediction': pred_labels
     })
-    result_df["prediction"] = result_df["prediction"].map({1: "Virulent", 0: "Non-Virulent"})
 
-    # Save
-    result_df.to_csv("virulence_predictions.csv", index=False)
-    print("Prediction results saved to 'virulence_predictions.csv'")
+    results.to_csv(output_file, index=False)
+    print(f"\nPredictions saved to '{output_file}'\n")
 
-    return result_df
+    # Print nicely
+    print("=== Prediction Results ===")
+    print(results.to_string(index=False))
 
-# ==============================
-# Run if called directly
-# ==============================
+# ==========================
+# Run Script
+# ==========================
 if __name__ == "__main__":
-    fasta_path = "proteins.fasta"  # Replace with your FASTA file
-    predict_from_fasta(fasta_path)
+    fasta_input = "unknown_sequences.fasta"  # replace this with your file path
+    predict_from_fasta(fasta_input)
